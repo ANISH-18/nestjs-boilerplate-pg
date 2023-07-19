@@ -1,7 +1,8 @@
-import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, ParseIntPipe, Patch, Post, Query } from '@nestjs/common';
 import { EmployeeService } from './employee.service';
 import { UpdateEmployeeDto } from './dto/update-employee.dto';
 import { CreateEmployeeDto } from './dto/create-employee.dto';
+
 
 @Controller('employee')
 export class EmployeeController {
@@ -11,6 +12,12 @@ export class EmployeeController {
     create(@Body() createUserDto: CreateEmployeeDto) {
         return this.employeeService.create(createUserDto);
     }
+
+    // @Get()
+    // findAll(@Query('page', ParseIntPipe) page: number = 1,
+    // @Query('limit', ParseIntPipe) limit: number = 20) {
+    //     return this.employeeService.findAll();
+    // }
 
     @Get()
     findAll() {

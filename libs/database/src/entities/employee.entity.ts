@@ -12,7 +12,7 @@ export class EmployeeEntity extends BaseEntity {
     profile_pic: string;
     
     @Column({
-        type: 'text', name: 'status', nullable: false
+        type: 'boolean', name: 'status', nullable: false
     })
     status: string;
 
@@ -20,6 +20,7 @@ export class EmployeeEntity extends BaseEntity {
         type: 'varchar', name: 'department_id', nullable: false
     })
     department_id: string;
+
 
     @Column({
         type: 'varchar', name: 'employee_role_id', nullable: false
@@ -61,14 +62,14 @@ export class EmployeeEntity extends BaseEntity {
     alternate_phone_number: string;
 
     @Column({
-        type: 'varchar', name: 'experienence_years', nullable: false
+        type: 'varchar', name: 'experience_years', nullable: false
     })
-    experienence_years: string;
+    experience_years: string;
 
     @Column({
-        type: 'varchar', name: 'experienence_months', nullable: false
+        type: 'varchar', name: 'experience_months', nullable: false
     })
-    experienence_months: string;
+    experience_months: string;
 
     @Column({
         type: 'date', name: 'date_of_joining', nullable: false

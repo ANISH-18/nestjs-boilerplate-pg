@@ -16,9 +16,9 @@ export class EmployeeService {
         return {message:"Employee Created Successfully"};
     }
 
-    async findAll() {
-        const employeeData= await  this.employeeRepository.findAndCount();
-        return {message:"Employee Created Successfully",data:employeeData};
+    async findAll() {         
+        const [items,count]= await  this.employeeRepository.findAndCount();
+        return {message:"Employee List",data:{count,items}};
     }
 
     async findOne(id: string) {
