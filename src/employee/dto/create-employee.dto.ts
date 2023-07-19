@@ -24,7 +24,7 @@ export class CreateEmployeeDto {
     last_name: string;
 
 
-    @IsNotEmpty({ message: 'dob is Required' })
+    @IsOptional({ message: 'dob is Required' })
     dob: string;
 
     @IsNotEmpty({ message: 'email_id is Required' })
@@ -36,13 +36,13 @@ export class CreateEmployeeDto {
     @IsNotEmpty({ message: 'alternate_phone_number is Required' })
     alternate_phone_number: string;
 
-    @IsNotEmpty({ message: 'experienence_years is Required' })
+    @IsOptional({ message: 'experienence_years is Required' })
     experienence_years: string;
 
-    @IsNotEmpty({ message: 'experienence_months is Required' })
+    @IsOptional({ message: 'experienence_months is Required' })
     experienence_months: string;
 
-    @IsNotEmpty({ message: 'date_of_joining is Required' })
+    @IsOptional({ message: 'date_of_joining is Required' })
     date_of_joining: string;
 
     @IsNotEmpty({ message: 'address is Required' })
