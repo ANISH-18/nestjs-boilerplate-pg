@@ -17,8 +17,8 @@ export class VendorService {
     }
 
     async findAll() {
-        const vendorData= await this.vendorRepository.findAndCount();      
-        return {message:"Vendor List Successfully",data:vendorData};
+       const [items,count]= await this.vendorRepository.findAndCount();      
+        return {message:"Vendor List Successfully",data:{count,items}};
     }
 
     async findOne(id: string) {

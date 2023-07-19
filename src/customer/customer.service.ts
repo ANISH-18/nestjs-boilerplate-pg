@@ -17,8 +17,8 @@ export class CustomerService {
     }
 
     async findAll() {
-        const customerData= await this.customerRepository.findAndCount();      
-        return {message:"Customer List ",data:customerData};
+        const [items,count]=  await this.customerRepository.findAndCount();      
+        return {message:"Customer List ",data:{count,items}};
     }
 
     async findOne(id: string) {
