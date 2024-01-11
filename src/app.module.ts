@@ -7,12 +7,7 @@ import { AuthController } from './auth/auth.controller';
 import { AuthService } from './auth/auth.service';
 import { DatabaseModule } from '@database';
 import { JwtAuthModule } from '@jwt_auth';
-import { VendorController } from './vendor/vendor.controller';
-import { VendorService } from './vendor/vendor.service';
-import { EmployeeController } from './employee/employee.controller';
-import { EmployeeService } from './employee/employee.service';
-import { CustomerController } from './customer/customer.controller';
-import { CustomerService } from './customer/customer.service';
+
 
 @Module({
   imports: [
@@ -22,7 +17,7 @@ import { CustomerService } from './customer/customer.service';
     HelpersModule,
     JwtAuthModule,
   ],
-  controllers: [AppController, AuthController, VendorController, EmployeeController, CustomerController],
-  providers: [AuthService, VendorService, EmployeeService, CustomerService],
+  controllers: [AppController, AuthController,],
+  providers: [AuthService],
 })
 export class AppModule { }
